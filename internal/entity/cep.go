@@ -5,23 +5,11 @@ import (
 )
 
 type Cep struct {
-	Cep         string `json:"cep"`
-	Logradouro  string `json:"logradouro"`
-	Complemento string `json:"complemento"`
-	Bairro      string `json:"bairro"`
-	Localidade  string `json:"localidade"`
-	Uf          string `json:"uf"`
-}
-
-func NewCep(cep string, logradouro string, complemento string, bairro string, localidade string, uf string) *Cep {
-	return &Cep{
-		Cep:         cep,
-		Logradouro:  logradouro,
-		Complemento: complemento,
-		Bairro:      bairro,
-		Localidade:  localidade,
-		Uf:          uf,
-	}
+	Cep          string `json:"cep"`
+	State        string `json:"state"`
+	City         string `json:"city"`
+	Neighborhood string `json:"neighborhood"`
+	Street       string `json:"street"`
 }
 
 func (c *Cep) Validate() error {
